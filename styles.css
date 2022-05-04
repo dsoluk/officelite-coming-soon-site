@@ -119,7 +119,7 @@ h3 {
     line-height: 48px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    /* color: var(--clr-hdr); */
+    color: var(--purewhite);
 }
 
 h4 {
@@ -249,10 +249,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
-
-
 }
 
 /* HEADER section incl. logo, graphic and masthead
@@ -289,12 +285,15 @@ body {
     margin: 0 auto;
 }
 
-.card-container {
+main {
     margin: 100px 24px 100px 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+
 }
 
 .basic-card, .pro-card, .ultimate-card {
@@ -308,6 +307,7 @@ body {
     width: 328px;
 
     margin-bottom: 2rem;
+
 }
 
 .basic-card {
@@ -321,5 +321,88 @@ body {
 
 .ultimate-card {
     background-color: var(--purewhite);
+}
+
+.pricing-bg {
+    background-image: url(./assets/home/bg-pattern-pricing.svg);
+    background-size: contain;
+    background-position: center -179px;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 880px;
+    height: 880px;
+}
+
+/* countdown card part...originally thought it would be footer
+but was difficult getting black background and image to position 
+correctly then realized it is much like the other cards
+----------------- */
+.countdown-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 87.46vw;
+
+    margin-top: calc(100px - 2rem);
+    margin-bottom: 2rem;
+
+
+
+}
+
+.bg-black {
+    position: absolute;
+    width: 1202px;
+    height: 1202px;
+
+    mix-blend-mode: normal;
+    opacity: 1;
+    transform: rotate(-180deg);
+
+    background-color: var(--black);
+    background-image: url(./assets/home/bg-pattern-footer.svg);
+    /* background-size: contain; */
+    /* background-position: center center; */
+    top: 38.5%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+h3 span {
+    color: var(--royalblue);
+}
+
+.countdown {
+    display: flex;
+    
+}
+
+.days, .hours, .min, .sec {
+    width: 72px;
+    height: 92px;
+    background-color: var(--darkblue);
+    border-radius: 4px;
+    list-style-type: none;
+    margin-inline: 6.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li:first-child {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--purewhite)
+}
+
+li:last-child {
+    color: var(--purewhite);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+
 }
 
