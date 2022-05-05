@@ -51,41 +51,50 @@ button, input, select, textarea {
   font-size: 100%;
 }
 
-input, textarea, select {
+input, textarea, select, legend {
   -webkit-box-sizing: border-box;
   box-sizing: border;
 }
 
-form {
+/* form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-inline: 24px; */
-}
+} */
 
-legend {
+/* legend {
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
     text-align: center;
     color: var(--clr-hdr);
+    min-width: 327px;
     margin: 24px;
 
-}
+} */
 
-label {
+/* @media screen and (min-width: 768px) {
+    legend {
+        /* margin: 0; */
+    }
+} */
+
+/* label {
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
     text-align: center;
     color: var(--clr-text);
     margin: 24px;
-}
+} */
 
-input {
+/* @media screen and (min-width: 768px) {
+    label {
+        margin: 0;
+    }
+} */
 
-}
 
 .bg-blue {
     background-color: var(--bg-blue);
@@ -213,8 +222,6 @@ input {
     font-size: 16px;
     line-height: 28px;
     background-color: none;
-
-    
 }
 
 .input-box {
@@ -245,14 +252,17 @@ body {
     background-color: var(--bg-body);
     color:  var(--clr-text);
 
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 /* HEADER section incl. logo, graphic and masthead
 -------------------------------------------------- */
+header {
+    max-width: 327px;
+}
 
 .logo {
     /* text-align: center; */
@@ -280,10 +290,70 @@ body {
 
 }
 
+.header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* margin: 24px; */
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .header-box {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        /* margin: 40px; */
+    }
+}
+
+
+
 .charts {
     width: 171px;
-    margin: 0 auto;
 }
+
+@media screen and (min-width: 768px) {
+    .charts {
+        width: 281px;
+    }
+}
+
+.header-info {
+    min-width: 327px;
+    text-align: center;
+    margin: 24px
+}
+
+@media screen and (min-width: 768px) {
+    .header-info {
+        width: 345px;
+
+    }
+}
+
+.header-info h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    /* text-align: center; */
+    color: var(--clr-hdr);
+    /* min-width: 327px; */
+}
+
+.header-info p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--clr-text);
+    margin: 24px;
+}
+
+/* MAIN section including cards...did 4 cards
+--------------------------------------------- */
 
 main {
     margin: 100px 24px 100px 24px;
@@ -295,6 +365,13 @@ main {
     position: relative;
 
 }
+
+@media screen and (min-width: 768px) {
+    main {
+        margin: 104px 40px 104px 40px;
+    }
+}
+
 
 .basic-card, .pro-card, .ultimate-card {
     display: flex;
