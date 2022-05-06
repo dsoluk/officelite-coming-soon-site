@@ -31,9 +31,13 @@
 
 *,
 html {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+margin: inherit;
+padding: inherit;
 }
 
 img {
@@ -185,9 +189,6 @@ button {
     border-radius: 28px;
     margin-top: 24px;
     margin-bottom: 40px;
-
-    
-
 }
 
 .btn-blue {
@@ -279,14 +280,27 @@ header {
 .logo-bg {
     background-image: url(./assets/home/bg-pattern-header.svg);
     background-size: contain;
-    background-position: -42px -170px;
     background-repeat: no-repeat;
     position: absolute;
-
-
     width: 458px;
     height: 458px;
+    background-position: -42px -170px;
+}
 
+@media screen and (min-width: 768px) {
+    .logo-bg {
+        width: 666px;
+        height: 666px;
+        background-position: 395px -164px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .logo-bg {
+        width: 1134px;
+        height: 1134px;
+        background-position: 656px -419px;
+    }
 }
 
 .header-box {
