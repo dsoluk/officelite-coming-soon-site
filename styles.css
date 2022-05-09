@@ -76,7 +76,7 @@ input, textarea, select, legend {
 
 /* @media screen and (min-width: 768px) {
     legend {
-        /* margin: 0; */
+        margin: 0;
     }
 } */
 
@@ -228,7 +228,6 @@ input {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: var(--grey);
-    
 }
 
 /* text field filled */
@@ -263,6 +262,13 @@ header {
 
 @media screen and (min-width: 768px) {
     header {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header {
+        max-width: 1440px;
     }
 }
 
@@ -403,14 +409,31 @@ main {
     align-items: center;
 
     position: relative;
-
 }
 
 @media screen and (min-width: 768px) {
     main {
-        margin: 104px 40px 104px 40px;
+        margin: 104px 48px 104px 48px;
     }
 }
+
+@media screen and (min-width: 992px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: 508px 176px;
+        column-gap: 30px;
+        row-gap: 82px;
+        grid-template-areas: 
+            "basic pro ultimate"
+            "countdown countdown countdown";
+        max-width: 1440px;
+        justify-content: center;
+        align-items: center;
+        }
+}
+
+
 
 
 .basic-card, .pro-card, .ultimate-card {
@@ -430,21 +453,39 @@ main {
 @media screen and (min-width: 768px) {
     .basic-card, .pro-card, .ultimate-card {
         width: 689px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
+}
 
+@media screen and (min-width: 992px) {
+    .basic-card, .pro-card, .ultimate-card {
+        width: 350px;
+    }
 }
 
 .basic-card {
     background-color: var(--purewhite);
-
+    grid-area: basic;
 }
 
 .pro-card {
     background-color: var(--bg-blue);
+    grid-area: pro;
 }
 
 .ultimate-card {
     background-color: var(--purewhite);
+    grid-area: ultimate;
+}
+
+.card-hdr {
+    min-width: calc(689px / 2);
+}
+
+.card-txt {
+    min-width: calc(689px / 2);
 }
 
 .pricing-bg {
@@ -456,6 +497,7 @@ main {
     width: 880px;
     height: 880px;
 }
+
 
 /* countdown card part...originally thought it would be footer
 but was difficult getting black background and image to position 
@@ -471,9 +513,16 @@ correctly then realized it is much like the other cards
 
     margin-top: calc(100px - 2rem);
     margin-bottom: 2rem;
+    grid-area: countdown;
+}
 
-
-
+@media screen and (min-width: 992px) {
+    .countdown-card {
+        max-width: 1110px;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+    }
 }
 
 .bg-black {
@@ -494,13 +543,32 @@ correctly then realized it is much like the other cards
     z-index: -1;
 }
 
+@media screen and (min-width: 768px) {
+    .bg-black {
+        width: 1454px;
+        /* height: 1454px; */
+        max-height: 986px;
+        top:37%;
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .bg-black {
+        width: 2036px;
+        /* height: 2036px; */
+        top: 29%;
+        max-height: 603px;
+        max-width: 1440px;
+    }
+}
+
 h3 span {
     color: var(--royalblue);
 }
 
 .countdown {
     display: flex;
-    
 }
 
 .days, .hours, .min, .sec {
@@ -520,7 +588,7 @@ li:first-child {
     font-weight: 700;
     font-size: 32px;
     line-height: 48px;
-    color: var(--purewhite)
+    color: var(--purewhite);
 }
 
 li:last-child {
