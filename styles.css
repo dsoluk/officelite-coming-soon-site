@@ -139,6 +139,14 @@ h4 {
     margin-bottom: 24px;
 }
 
+h5 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: var(--clr-hdr);
+}
+
 .bodytext1 {
     font-weight: 400;
     font-size: 18px;
@@ -152,6 +160,13 @@ h4 {
     line-height: 28px;
     margin-block: 8px;
     /* color: var(--clr-text); */
+}
+
+.bodytext3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
 }
 
 .clr-black {
@@ -172,9 +187,9 @@ h4 {
     opacity: .75;
 }
 
-/* BUTTONS
+/* Link Anchors and BUTTONS
 ---------- */
-button {
+button, a {
     font-weight: 700;
     font-size: 16px;
     line-height: 28px;
@@ -186,6 +201,8 @@ button {
     border-radius: 28px;
     margin-top: 24px;
     margin-bottom: 40px;
+    text-decoration: none;
+    padding: 14px 40px 14px 40px;
 }
 
 .btn-blue {
@@ -598,3 +615,30 @@ li:last-child {
 
 }
 
+/* SIGN-UP HTML classes
+----------------------- */
+
+.main-box {
+    min-width: 327px;
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+@media screen and (min-width: 768px) {
+    .main-box {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .main-box {
+        max-width: 1440px;
+        flex-direction: row;
+    }
+}
+
+.masthead-box {
+
+}
