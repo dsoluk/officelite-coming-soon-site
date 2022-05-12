@@ -56,6 +56,8 @@ input, textarea, select, legend {
   box-sizing: border;
 }
 
+.hide-this {display: none};
+
 /* form {
     display: flex;
     flex-direction: column;
@@ -128,8 +130,13 @@ h3 {
     line-height: 48px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: var(--purewhite);
+    text-align: center;
+    margin-bottom: 18px;
 }
+
+.home-clr {color: var(--purewhite);}
+
+.signup-clr {color: var(--clr-hdr);}
 
 h4 {
     font-weight: 400;
@@ -167,6 +174,8 @@ h5 {
     font-size: 16px;
     line-height: 26px;
     text-align: center;
+    margin-top: 16px;
+    margin-bottom: 64px;
 }
 
 .clr-black {
@@ -186,6 +195,11 @@ h5 {
     mix-blend-mode: normal;
     opacity: .75;
 }
+
+.clr-error {color: var(--red);}
+
+.border-err {border-bottom-color: var(--red);}
+
 
 /* Link Anchors and BUTTONS
 ---------- */
@@ -235,27 +249,68 @@ input {
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
-    background-color: none;
-}
-
-.input-box {
-    color: var(--grey);
-    mix-blend-mode: normal;
-    opacity: 0.5;
+    color: rgba(116, 123, 149, .5);
+    border-top: none;
+    border-right: none;
+    border-left: none;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: var(--grey);
+    border-bottom-color: rgba(116, 123, 149, .5);
+    width: 275px;
+    height: 45px;
 }
+
+select {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(116, 123, 149, .5);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(116, 123, 149, .5);
+    width: 275px;
+    height: 45px;
+}
+
+option {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgb(116, 123, 149);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(116, 123, 149, .5);
+    width: 275px;
+    height: 45px;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(51, 57, 80);
+}
+
+h6 span {
+    color: rgba(51, 57, 80, .4);
+}
+
 
 /* text field filled */
-.input-box::after {
-    opacity: 1;
-}
+/* .input-box::after {
+    color: rgba(116, 123, 149, 1);
+} */
 
 /* text field error */
-.input-box {
-    opacity: 1;
-}
+/* .input-box::error {
+    color: rgba(240, 91, 91, 1);
+} */
 
 /* ------------------
 ------------------ */
@@ -586,12 +641,12 @@ h3 span {
 
 .countdown {
     display: flex;
+    margin-bottom: 40px;
 }
 
 .days, .hours, .min, .sec {
     width: 72px;
     height: 92px;
-    background-color: var(--darkblue);
     border-radius: 4px;
     list-style-type: none;
     margin-inline: 6.5px;
@@ -601,19 +656,31 @@ h3 span {
     align-items: center;
 }
 
+/* COLORS for Countdown clock */
+.home-bg {background-color: var(--darkblue);}
+
+.home-clr-1 {color: var(--purewhite);}
+
+.home-clr-2 {color: rgba(255, 255, 255, .5);}
+
+.signup-bg {background-color: rgba(81, 117, 255, .1);}
+
+.signup-clr-1 {color: var(--royalblue);}
+
+.signup-clr-2 {color: rgba(51, 57, 80, .5);}
+
+
 li:first-child {
     font-weight: 700;
     font-size: 32px;
     line-height: 48px;
-    color: var(--purewhite);
 }
 
-li:last-child {
+/* li:last-child {
     color: var(--purewhite);
     mix-blend-mode: normal;
     opacity: 0.5;
-
-}
+} */
 
 /* SIGN-UP HTML classes
 ----------------------- */
@@ -640,5 +707,21 @@ li:last-child {
 }
 
 .masthead-box {
+
+}
+
+#getinfoform {
+    background: var(--purewhite);
+    box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+    border-radius: 13px;
+}
+
+fieldset {
+    border: none;  
+    margin: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    color: #333950;
 
 }
