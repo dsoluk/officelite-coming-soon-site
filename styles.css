@@ -201,6 +201,17 @@ h5 {
 .border-err {border-bottom-color: var(--red);}
 
 
+
+.form-dark {
+    color: var(--darkblue);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.form-dark40 {color: rgba(51, 57, 80, .4);}
+
+
 /* Link Anchors and BUTTONS
 ---------- */
 button, a {
@@ -265,21 +276,6 @@ select {
     font-size: 16px;
     line-height: 28px;
     color: rgba(116, 123, 149, .5);
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgba(116, 123, 149, .5);
-    width: 275px;
-    height: 45px;
-}
-
-option {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-    color: rgb(116, 123, 149);
     border-top: none;
     border-right: none;
     border-left: none;
