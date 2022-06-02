@@ -6,8 +6,8 @@ console.log(freebtn)
 
 freebtn.addEventListener('click', function() {
     console.log(freebtn.id);
-    pricePlan = freebtn.id
-    openSignup(pricePlan)
+    pricePlan = freebtn.id;
+    openSignup(pricePlan);
 });
 
 function openSignup(pricePlan) {

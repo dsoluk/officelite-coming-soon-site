@@ -3,14 +3,11 @@
 // --------------------------------------
 function checkEmpty (enteredID, enteredValue) {
     if (enteredValue !== "" && enteredValue !== null) {
-        console.log("Is NOT empty")
-        return true
+        // console.log("Is NOT empty");
+        return false;
     } else {
-        console.log("Value is empty so mark as red")
-        return `
-            <input type="text" id="${enteredID}" name="${enteredID}" placeholder="${enteredValue}"
-                class="clr-error border-err"><br><br>
-        `
+        // console.log("Value is empty so mark as red");
+        return true;
     }
 };
 
@@ -26,31 +23,32 @@ function ValidateEmail(inputText)
     {
     console.log("You have entered an invalid email address!");
     // document.form1.text1.focus();
-    return `
-            <input type="email" id="email" name="email" placeholder="  Email Address"
-                class="clr-error border-err"><br><br>
-        `;
+    return false;
     }
 };
 
 //checkEmpty once submit button is clicked
-let submitBtn = document.querySelector('button[type="submit"]');
-console.log(submitBtn);
+let submitBtn = document.querySelector('#submit');
+// console.log(submitBtn);
 
-submitBtn.addEventListener('click', function(e) {
-    console.log("Form submitted...validating inputs");
+submitBtn.addEventListener("click", function(e) {
+    console.log("The target is: " + e.target);
+
+    e.preventDefault();
 
     //check Name is not empty
     let enteredName = document.querySelector("#name");
+    // console.log(enteredName.classList);
+    checkEmpty(enteredName.id, enteredName.value) ?
+        enteredName.classList.add("clr-error", "border-err") :
+        console.log("enteredName is not Empty");
 
-        checkEmpty(enteredName.id, enteredName.value);
-    
     //check Email is not empty and valid pattern
-    // let enteredEmail = document.querySelector("#email");
+    let enteredEmail = document.querySelector("#email");
 
-    //     checkEmpty(enteredEmail.id, enteredEmail.value);
+        checkEmpty(enteredEmail.id, enteredEmail.value);
 
-    //     ValidateEmail(enteredEmail.value);
+        ValidateEmail(enteredEmail.value);
 
 
 

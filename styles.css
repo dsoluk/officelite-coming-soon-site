@@ -196,7 +196,7 @@ h5 {
     opacity: .75;
 }
 
-.clr-error {color: var(--red);}
+.clr-error::placeholder {color: var(--red);}
 
 .border-err {border-bottom-color: var(--red);}
 
@@ -269,6 +269,7 @@ input {
     border-bottom-color: rgba(116, 123, 149, .5);
     width: 275px;
     height: 45px;
+    outline: none;
 }
 
 select {
@@ -638,6 +639,7 @@ h3 span {
 .countdown {
     display: flex;
     margin-bottom: 40px;
+    justify-content: center;
 }
 
 .days, .hours, .min, .sec {
